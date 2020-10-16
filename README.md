@@ -1,27 +1,18 @@
-# NextJS Typescript Boilerplate
+# Wedding Photo Gallery
 
-Bootstrap a developer-friendly NextJS app configured with:
+This app has just been initialized.
 
-- [Typescript](https://www.typescriptlang.org/)
-- Linting with [ESLint](https://eslint.org/)
-- Formatting with [Prettier](https://prettier.io/)
-- Linting, typechecking and formatting on by default using [`husky`](https://github.com/typicode/husky) for commit hooks
-- Testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
+This is what it will look like... 
 
-## Deploy your own
+**Homepage - Desktop & Tablet**
+[!Homepage - Desktop & Tablet](./docs/TumultyEverAfter-IpadDesktop-Home.png)
 
-Deploy the example using [Vercel](https://vercel.com):
+**Homepage - Mobile**
+[!Homepage - Desktop & Tablet](./docs/TumultyEverAfter-Mobile-Gallery.png)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest)
+**Gallery - Desktop & Tablet**
+[!Homepage - Desktop & Tablet](./docs/TumultyEverAfter-IpadDesktop-Gallery.png)
 
-## How to use
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-typescript-eslint-jest with-typescript-eslint-jest-app
-# or
-yarn create next-app --example with-typescript-eslint-jest with-typescript-eslint-jest-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+**Gallery - Mobile**
+<sup>Coming soon...</sup>
