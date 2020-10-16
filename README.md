@@ -1,8 +1,12 @@
 # Wedding Photo Gallery
 
+## Description
+
+## Development
+
 This app has just been initialized.
 
-This is what it will look like... 
+## Design
 
 ## Homepage - Desktop & Tablet
 ![Homepage - Desktop & Tablet](./docs/TumultyEverAfter-IpadDesktop-Home.png)
