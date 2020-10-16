@@ -1,10 +1,14 @@
 # Wedding Photo Gallery
 
+...
+
 ## Description
+
+...
 
 ## Development
 
-This app has just been initialized.
+...
 
 ## Design
 
