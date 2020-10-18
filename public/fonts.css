@@ -1,0 +1,15 @@
+/** Fonts **/
+@font-face {
+  font-family: 'Roboto Condensed Light';
+  src: url('./fonts/RobotoCondensed-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed Right';
+  src: url('./fonts/RobotoCondensed-Right.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Shadow Into Light Two Regular';
+  src: url('./fonts/ShadowsIntoLightTwo-Regular.ttf') format('truetype');
+}
