@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import ImageBlock from '../components/ImageBlock'
 import ContentBlock from '../components/ContentBlock'
-// import SliderBlock from '../components/SliderBlock';
+import SliderBlock from '../components/SliderBlock'
+import VideoBlock from '../components/VideoBlock'
+import GalleryLink from '../components/GalleryLink'
 
 export const Home = (): JSX.Element => (
   <>
@@ -39,6 +41,12 @@ export const Home = (): JSX.Element => (
           We met in the fall of 2013 and have been laughing together ever since.
         </p>
       </ContentBlock>
+      <SliderBlock />
+      <div className="title">
+        <h3>Our Love Story</h3>
+      </div>
+      <VideoBlock />
+      <GalleryLink />
     </main>
     <style jsx>{`
       h1 {
@@ -48,12 +56,25 @@ export const Home = (): JSX.Element => (
       h3 {
         font-family: 'Shadow Into Light Two Regular';
         text-align: center;
-        font-size: 2.3rem;
+        font-size: 2.5rem;
+        margin-bottom: 0;
       }
 
       p {
         font-family: 'Roboto Condensed Light';
         font-size: 1.5rem;
+      }
+
+      .title {
+        width: 100%;
+        display: block;
+        text-align: center;
+      }
+
+      @min-width: (min-width: 1225px) {
+        h3 {
+          font-size: 3.5rem;
+        }
       }
     `}</style>
   </>

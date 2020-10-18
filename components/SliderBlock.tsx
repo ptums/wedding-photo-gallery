@@ -1,6 +1,7 @@
 import React from 'react'
 import Carousel from 'react-multi-carousel'
-// import ImageBlock from './ImageBlock';
+import ImageBlock from './ImageBlock'
+import slides from '../utils/slides.json'
 
 export default function SliderBlock() {
   const responsive = {
@@ -24,8 +25,10 @@ export default function SliderBlock() {
 
   return (
     <Carousel responsive={responsive}>
-      {/* {(slides.length > 0 ) && slides.map((slide, index) => <ImageBlock key={`slide-${index}`} {...slide} />)} */}
-      Slides of will go here....
+      {slides.length > 0 &&
+        slides.map((slide, index) => (
+          <ImageBlock key={`slide-${index}`} {...slide} />
+        ))}
     </Carousel>
   )
 }

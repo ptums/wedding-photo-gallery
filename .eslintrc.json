@@ -16,6 +16,9 @@
     "jest": true,
     "node": true
   },
+  "settings": {
+    "react": "detect"
+  },
   "rules": {
     "react/react-in-jsx-scope": 0,
     "react/display-name": 0,

@@ -11,17 +11,28 @@ export default function ContentBlock({
 }: Props): JSX.Element {
   return (
     <div>
-      {children}
+      <div className={`position-container ${position}`}>{children}</div>
       <style jsx>{`
         div {
-          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
           margin-bottom: 3.5em;
         }
 
+        .position-container {
+          width: 100%;
+        }
+
         @media (min-width: 1200px) {
-          div {
+          .position-container {
             width: 50%;
-            float: ${position};
+          }
+          .left {
+            align-self: flex-start;
+          }
+          .right {
+            align-self: flex-end;
           }
         }
       `}</style>

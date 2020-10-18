@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app'
-
+import Link from 'next/link'
 import 'react-multi-carousel/lib/styles.css'
 import '../styles/globals.css'
 
@@ -7,14 +7,22 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div id="wedding-gallery">
       <header>
-        <h1>
-          Rachel & Peter
-          <span>2019</span>
-        </h1>
+        <Link href="/">
+          <a>
+            <h1>
+              Rachel & Peter
+              <span>2019</span>
+            </h1>
+          </a>
+        </Link>
       </header>
       <Component {...pageProps} />
       <footer>
-        <p>Peter Tumulty 2020</p>
+        <p>
+          That&apos;s all way have, thank you for visiting!
+          <br />
+          Peter Tumulty 2020
+        </p>
       </footer>
       <style jsx>
         {`
@@ -29,6 +37,24 @@ function MyApp({ Component, pageProps }: AppProps) {
             display: block;
             width: 100%;
             margin-top: -10px;
+          }
+
+          a {
+            color: #000;
+            text-decoration: none;
+          }
+
+          a:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+
+          footer {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 1.2rem;
+            font-family: 'Shadow Into Light Two Regular';
           }
         `}
       </style>

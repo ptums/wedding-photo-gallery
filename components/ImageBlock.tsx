@@ -1,17 +1,12 @@
 import React from 'react'
+import { Image } from '../interfaces'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
-
-type Props = {
-  image: string
-  altText: string
-  options: string
-}
 
 export default function ImageBlock({
   image,
   altText,
   options,
-}: Props): JSX.Element {
+}: Image): JSX.Element {
   const imageUrl = `https://res.cloudinary.com/petertumulty/image/upload${
     options ? options : '/'
   }v1602980583/${image}`
