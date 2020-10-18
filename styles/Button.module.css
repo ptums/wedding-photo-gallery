@@ -1,4 +1,3 @@
-
 .button {
   display: block;
   padding: 1em;
@@ -11,8 +10,8 @@
   color: #fff;
   text-align: center;
   text-decoration: none;
-  font-family: 'Roboto Condensed Regular'; 
-  font-size: 1.2rem; 
+  font-family: 'Roboto Condensed Regular';
+  font-size: 1.2rem;
 }
 
 .button:hover {
