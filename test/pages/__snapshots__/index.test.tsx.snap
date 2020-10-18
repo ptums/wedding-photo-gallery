@@ -3,7 +3,7 @@
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
   <main
-    class="jsx-1870490194"
+    class="jsx-1773791946"
   >
     <span
       class=" lazy-load-image-background blur"
@@ -12,10 +12,87 @@ exports[`Home page matches snapshot 1`] = `
       <img
         alt="Rachel & Peter wedding"
         height="auto"
-        src="https://res.cloudinary.com/petertumulty/image/upload/e_shadow:35,r_10/v1602980583/wedding/site/peterrachelattable_utqiyz.webp"
+        src="https://res.cloudinary.com/petertumulty/image/upload/e_shadow:35,r_10/v1602980583/wedding/site/peterrachelattablewithtext-version-two_lkoevj.webp"
         width="100%"
       />
     </span>
+    <div
+      class="jsx-1745397157"
+    >
+      <div
+        class="jsx-1745397157 position-container right"
+      >
+        <h3
+          class="jsx-1773791946"
+        >
+          About
+        </h3>
+        <p
+          class="jsx-1773791946"
+        >
+          The best part of getting married is getting the opportunity to celebrate with our loved ones. Thank you all for the continuous support and love.
+        </p>
+        <p
+          class="jsx-1773791946"
+        >
+          <strong
+            class="jsx-1773791946"
+          >
+            We were so happy you could party it up with us on March 30th, 2019!
+          </strong>
+        </p>
+      </div>
+    </div>
+    <span
+      class=" lazy-load-image-background blur"
+      style="color: transparent; display: inline-block; height: auto; width: 100%;"
+    >
+      <img
+        alt="wedding ring"
+        height="auto"
+        src="https://res.cloudinary.com/petertumulty/image/upload/e_shadow:300,r_10/v1602980583/wedding/site/ring1-version-two_tkcxov.webp"
+        width="100%"
+      />
+    </span>
+    <div
+      class="jsx-1745397157"
+    >
+      <div
+        class="jsx-1745397157 position-container left"
+      >
+        <h3
+          class="jsx-1773791946"
+        >
+          Our History
+        </h3>
+        <p
+          class="jsx-1773791946"
+        >
+          We met in the fall of 2013 and have been laughing together ever since.
+        </p>
+      </div>
+    </div>
+    <div
+      class="react-multi-carousel-list  "
+    >
+      <ul
+        class="react-multi-carousel-track "
+        style="transition: none; overflow: unset; transform: translate3d(0px,0,0);"
+      />
+    </div>
+    <div
+      class="jsx-1773791946 title"
+    >
+      <h3
+        class="jsx-1773791946"
+      >
+        Our Love Story
+      </h3>
+    </div>
+    Video will go here..
+    <div>
+      Link to gallery page...
+    </div>
   </main>
 </DocumentFragment>
 `;

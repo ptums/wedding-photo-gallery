@@ -5,8 +5,8 @@
 }
 
 @font-face {
-  font-family: 'Roboto Condensed Right';
-  src: url('./fonts/RobotoCondensed-Right.ttf') format('truetype');
+  font-family: 'Roboto Condensed Regular';
+  src: url('./fonts/RobotoCondensed-Regular.ttf') format('truetype');
 }
 
 @font-face {

@@ -15,7 +15,7 @@ describe('ImageContainer component', () => {
     screen.debug()
   })
 
-  it('renders proper props', () => {
+  it('renders proper ImageContainer props', () => {
     render(<ImageContainer {...props} />)
 
     expect(screen.getByAltText('Rachel & Peter wedding')).toBeDefined()

@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
       <footer>
         <p>
-          That&apos;s all way have, thank you for visiting!
+          That&apos;s all we have, thank you for visiting!
           <br />
           Peter Tumulty 2020
         </p>
