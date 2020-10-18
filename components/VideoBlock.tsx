@@ -9,7 +9,6 @@ const VideoBlock = () => (
       height="595"
       className="aligncenter"
       frameBorder="0"
-      webkitallowfullscreen={true}
       mozallowfullscreen={true}
       allowFullScreen={true}
     />
