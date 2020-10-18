@@ -26,13 +26,16 @@
     ]
   },
   "dependencies": {
-    "cloudinary": "^1.23.0",
+    "connect-mongo": "^3.2.0",
     "enzyme": "^3.11.0",
+    "mongodb": "^3.6.2",
     "next": "latest",
+    "next-connect": "^0.9.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-lazy-load-image-component": "^1.5.0",
-    "react-multi-carousel": "^2.5.5"
+    "react-multi-carousel": "^2.5.5",
+    "swr": "^0.3.5"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",

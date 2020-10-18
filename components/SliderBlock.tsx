@@ -1,9 +1,12 @@
 import React from 'react'
 import Carousel from 'react-multi-carousel'
-import ImageBlock from './ImageBlock'
-import slides from '../utils/slides.json'
+import { imageUrl } from '../utils/helpers'
+import { Slide } from '../interfaces'
+type Props = {
+  slides: Slide[]    
+}
 
-export default function SliderBlock() {
+export default function SliderBlock({ slides }: Props): JSX.Element {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -31,7 +34,7 @@ export default function SliderBlock() {
     <Carousel
       additionalTransfrom={0}
       arrows
-      autoPlaySpeed={3000}
+      autoPlaySpeed={2000}
       centerMode={false}
       dotListClass=""
       draggable
@@ -44,11 +47,18 @@ export default function SliderBlock() {
       sliderClass=""
       slidesToSlide={1}
       swipeable
+      autoPlay
       responsive={responsive}
     >
       {slides.length > 0 &&
         slides.map((slide, index) => (
-          <ImageBlock key={`slide-${index}`} {...slide} />
+          <img
+            key={`${slide.collection}-${index}`}
+            alt={slide.altText}
+            height="auto"
+            src={imageUrl(slide.options, slide.image)}
+            width="100%"
+          />
         ))}
     </Carousel>
   )

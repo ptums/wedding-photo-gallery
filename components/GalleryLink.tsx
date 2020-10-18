@@ -12,7 +12,7 @@ const GalleryLink = () => (
     <style jsx>{`
       div {
         margin-top: 3.5rem;
-        margin-bottom: 3.5rem;
+        margin-bottom: 5rem;
         padding: 2em;
         text-align: center;
         background-color: #e9e9e9;

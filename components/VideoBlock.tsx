@@ -9,7 +9,6 @@ const VideoBlock = () => (
       height="595"
       className="aligncenter"
       frameBorder="0"
-      mozallowfullscreen={true}
       allowFullScreen={true}
     />
     <style jsx>{`
@@ -17,6 +16,7 @@ const VideoBlock = () => (
         box-shadow: 2px 5px 10px #e9e9e9;
         border-radius: 3px;
         margin-top: 3em;
+        margin-bottom: 5em;
         margin-left: auto;
         margin-right: auto;
         display: block;

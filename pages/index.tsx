@@ -1,11 +1,16 @@
 import Head from 'next/head'
+import useSWR from 'swr'
 import ImageBlock from '../components/ImageBlock'
 import ContentBlock from '../components/ContentBlock'
 import SliderBlock from '../components/SliderBlock'
 import VideoBlock from '../components/VideoBlock'
 import GalleryLink from '../components/GalleryLink'
+import { fetcher } from '../utils/helpers';
 
-export const Home = (): JSX.Element => (
+export default function Home(): JSX.Element {
+  const { data } = useSWR('/api/get-photo-details/home', fetcher);
+
+  return (
   <>
     <Head>
       <title>Rachel & Peter Wedding Photo Gallery</title>
@@ -41,7 +46,7 @@ export const Home = (): JSX.Element => (
           We met in the fall of 2013 and have been laughing together ever since.
         </p>
       </ContentBlock>
-      <SliderBlock />
+      {(data != undefined) && <SliderBlock slides={data.slides} />}
       <div className="title">
         <h3>Our Love Story</h3>
       </div>
@@ -69,6 +74,7 @@ export const Home = (): JSX.Element => (
         width: 100%;
         display: block;
         text-align: center;
+        margin-top: 4em;
       }
 
       @min-width: (min-width: 1225px) {
@@ -78,6 +84,4 @@ export const Home = (): JSX.Element => (
       }
     `}</style>
   </>
-)
-
-export default Home
+)}

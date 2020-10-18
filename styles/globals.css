@@ -19,6 +19,10 @@ footer {
   margin-left: auto;
 }
 
+.react-multi-carousel-dot-list  {
+  margin-top: 5em;
+}
+
 @media (min-width: 576px) {
   header,
   main,
