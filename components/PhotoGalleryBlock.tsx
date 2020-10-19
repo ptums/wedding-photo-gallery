@@ -11,6 +11,14 @@ const PhotoGalleryBlock = ({ title }: Props) => {
   return (
     <div>
       <h3>{title}</h3>
+      <style jsx>{`
+        h3 {
+          font-family: 'Shadow Into Light Two Regular';
+          text-align: center;
+          font-size: 3.5rem;
+          margin-bottom: 0;
+        }
+      `}</style>
     </div>
   )
 }
