@@ -18,6 +18,34 @@ A progressinve web application that contains multi sliders, videos, and download
 
 ## Code style
 
+## Tech used
+
+**Built with**
+  * [Next.js](https://nextjs.org/)
+  * [React Lazy Load Image Component](https://www.npmjs.com/package/react-lazy-load-image-component)
+  * [React Multi Carousel](https://w3js.com/react-multi-carousel)
+  * [SWR](https://github.com/vercel/swr)
+  * [TypeScript](https://www.typescriptlang.org/)
+  * [Jest](https://jestjs.io/)
+  * [React Testing Library](https://testing-library.com)
+  * [Mongoose](https://mongoosejs.com/)
+  * [MongoDB](https://www.mongodb.com/)
+  * [Cloudinary](https://cloudinary.com/)
+
+## Install
+
+```
+git clone https://github.com/ptums/wedding-photo-gallery.git
+cd wedding-photo-gallery
+yarn install
+```
+
+## Tests
+
+## Development
+
+## Deployment
+
 ## Screen shots
 
 #### Homepage - Desktop & Tablet
@@ -35,25 +63,3 @@ A progressinve web application that contains multi sliders, videos, and download
 #### Gallery - Mobile
 
 <sup>Coming soon...</sup>
-
-## Tech used
-
-## Install
-
-```
-git clone https://github.com/ptums/wedding-photo-gallery.git
-cd wedding-photo-gallery
-yarn install
-```
-
-## Tests
-
-## Development
-
-## Deployment
-
-
-
-
-
-
