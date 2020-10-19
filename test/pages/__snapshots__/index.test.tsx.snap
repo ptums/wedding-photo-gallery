@@ -3,7 +3,7 @@
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
   <main
-    class="jsx-1773791946"
+    class="jsx-2960646220"
   >
     <span
       class=" lazy-load-image-background blur"
@@ -23,20 +23,20 @@ exports[`Home page matches snapshot 1`] = `
         class="jsx-1745397157 position-container right"
       >
         <h3
-          class="jsx-1773791946"
+          class="jsx-2960646220"
         >
           About
         </h3>
         <p
-          class="jsx-1773791946"
+          class="jsx-2960646220"
         >
           The best part of getting married is getting the opportunity to celebrate with our loved ones. Thank you all for the continuous support and love.
         </p>
         <p
-          class="jsx-1773791946"
+          class="jsx-2960646220"
         >
           <strong
-            class="jsx-1773791946"
+            class="jsx-2960646220"
           >
             We were so happy you could party it up with us on March 30th, 2019!
           </strong>
@@ -61,37 +61,63 @@ exports[`Home page matches snapshot 1`] = `
         class="jsx-1745397157 position-container left"
       >
         <h3
-          class="jsx-1773791946"
+          class="jsx-2960646220"
         >
           Our History
         </h3>
         <p
-          class="jsx-1773791946"
+          class="jsx-2960646220"
         >
           We met in the fall of 2013 and have been laughing together ever since.
         </p>
       </div>
     </div>
     <div
-      class="react-multi-carousel-list  "
-    >
-      <ul
-        class="react-multi-carousel-track "
-        style="transition: none; overflow: unset; transform: translate3d(0px,0,0);"
-      />
-    </div>
-    <div
-      class="jsx-1773791946 title"
+      class="jsx-2960646220 title"
     >
       <h3
-        class="jsx-1773791946"
+        class="jsx-2960646220"
       >
         Our Love Story
       </h3>
     </div>
-    Video will go here..
-    <div>
-      Link to gallery page...
+    <iframe
+      allowfullscreen=""
+      class="jsx-433474415 aligncenter"
+      frameborder="0"
+      height="595"
+      src="https://player.vimeo.com/video/270889689"
+      title="Rachel & Peter video"
+      width="1046"
+    />
+    <div
+      class="jsx-1634938835"
+    >
+      <p
+        class="jsx-1634938835"
+      >
+        Now I know what you are really here for...
+      </p>
+      <p
+        class="jsx-1634938835"
+      >
+        <strong
+          class="jsx-1634938835"
+        >
+          Pictures!
+        </strong>
+      </p>
+      <p
+        class="jsx-1634938835"
+      >
+        Here's a link to our wedding photo album, enjoy.
+      </p>
+      <a
+        class="button"
+        href="/wedding-gallery"
+      >
+        Photo Album
+      </a>
     </div>
   </main>
 </DocumentFragment>

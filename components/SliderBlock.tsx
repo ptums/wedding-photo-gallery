@@ -2,6 +2,7 @@ import React from 'react'
 import Carousel from 'react-multi-carousel'
 import { imageUrl } from '../utils/helpers'
 import { Slide } from '../interfaces'
+
 type Props = {
   slides: Slide[]
 }
@@ -51,9 +52,9 @@ export default function SliderBlock({ slides }: Props): JSX.Element {
       responsive={responsive}
     >
       {slides.length > 0 &&
-        slides.map((slide, index) => (
+        slides.map((slide) => (
           <img
-            key={`${slide.category}-${index}`}
+            key={slide._id}
             alt={slide.altText}
             height="auto"
             src={imageUrl(slide.options, slide.image)}

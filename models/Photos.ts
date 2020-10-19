@@ -16,5 +16,5 @@ export interface PhotosInterface extends Document {
   createdAt: Date
 }
 
-export default mongoose.models.Coins ||
+export default mongoose.models.Photos ||
   mongoose.model<PhotosInterface>('Photos', PhotosSchema)

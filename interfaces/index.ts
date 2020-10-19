@@ -1,4 +1,5 @@
 export type Slide = {
+  _id: string
   image: string
   altText: string
   options: string
