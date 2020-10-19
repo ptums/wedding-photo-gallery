@@ -1,6 +1,12 @@
 export type Slide = {
-  image: string,
-  altTex: string,
-  options: string,
-  collection: string
+  image: string
+  altText: string
+  options: string
+  category: string
+}
+
+export type Photo = {
+  image: string
+  altText: string
+  options: string
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image } from '../interfaces'
+import { Photo } from '../interfaces'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { imageUrl } from '../utils/helpers'
 
@@ -7,9 +7,7 @@ export default function ImageBlock({
   image,
   altText,
   options,
-}: Image): JSX.Element {
-
-
+}: Photo): JSX.Element {
   return (
     <>
       <LazyLoadImage

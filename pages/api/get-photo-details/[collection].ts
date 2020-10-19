@@ -1,28 +1,27 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import nextConnect from 'next-connect'
-import middleware from '../../../middlewares/middleware'
+import dbConnect from '../../../utils/db-connect'
+import Photos, { PhotosInterface } from '../../../models/Photos'
 
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  await dbConnect()
 
-const handler = nextConnect<NextApiRequest, NextApiResponse>()
+  if (req.method === 'GET') {
+    try {
+      const {
+        query: { collection },
+      } = req
 
-handler.use(middleware)
+      const slides: Array<PhotosInterface> = await Photos.find({
+        collection,
+      }).sort([['created_at', -1]])
 
-handler.get(async (req, res) => {
-  try {
-    const {
-      query: { collection }
-    } = req
-
-    const slides = await req.db.collection('photos')
-      .find({collection})
-      .sort({ createdAt: -1 })
-      .toArray()
-
-    res.status(200).json({ status: 200, collection, slides })
-  } catch(error) {
-    console.error(error);
-    res.status(500).json(error);
+      res.status(200).json({ status: 200, collection, slides })
+    } catch (error) {
+      console.error(error)
+      res.status(500).json(error)
+    }
   }
-})
-
-export default handler
+}
