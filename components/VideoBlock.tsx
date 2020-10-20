@@ -10,6 +10,7 @@ const VideoBlock = () => (
       className="aligncenter"
       frameBorder="0"
       allowFullScreen={true}
+      data-testid="video"
     />
     <style jsx>{`
       iframe {

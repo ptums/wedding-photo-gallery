@@ -5,12 +5,11 @@ A progressinve web application that contains multi sliders, videos, and download
 ## To Do
 
 1. Upload photos for each section
-2. Build out Slider Component -- with custom dots and download links
-3. Write component tests
-4. Integrate PWA configs
-5. Add a download link for the PWA
-6. Push to hosting
-7. Clean up README
+2. Integrate PWA configs
+3. Add a download link for the PWA
+4. Push to hosting
+5. Bug: Fix download link issue
+6. Finish writing component tests
 
 ## Motivation
 

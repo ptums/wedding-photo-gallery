@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app'
 import Link from 'next/link'
 import 'react-multi-carousel/lib/styles.css'
+import 'react-image-lightbox/style.css'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {

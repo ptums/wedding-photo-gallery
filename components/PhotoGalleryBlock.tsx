@@ -1,7 +1,7 @@
 import React from 'react'
 import { Slide } from '../interfaces'
 import ImageBlock from './ImageBlock'
-import { imageUrl } from '../utils/helpers'
+import LightBoxView from './LightBoxView'
 
 type Props = {
   title: string
@@ -12,37 +12,46 @@ const PhotoGalleryBlock = ({ title, slides }: Props) => {
   return (
     <div>
       <h3>{title}</h3>
-      {slides.length > 0 &&
-        slides.map((slide) => (
-          <div key={slide._id}>
-            <ImageBlock
-              image={slide.image}
-              altText={slide.altText}
-              options={slide.options}
-            />
-            <a href={imageUrl(slide.options, slide.image)} download>
-              Download Photo
-            </a>
-          </div>
-        ))}
+      <div className="gallery">
+        {slides.length > 0 &&
+          slides.map((slide) => (
+            <div key={slide._id} className="gallery-image">
+              <ImageBlock
+                image={slide.image}
+                altText={slide.altText}
+                options="/c_scale,w_390/"
+              />
+              <LightBoxView image={slide.image} />
+            </div>
+          ))}
+      </div>
       <style jsx>{`
         h3 {
           font-family: 'Shadow Into Light Two Regular';
           text-align: center;
-          font-size: 3.5rem;
-          margin-bottom: 0;
+          margin-bottom: 14px;
+          font-size: 1.5rem;
         }
 
-        a {
-          font-family: 'Roboto Condensed Light';
-          font-size: 1.3rem;
-          margin-bottom: 1.1em;
-          display: block;
-          color: purple;
+        .gallery {
+          display: grid;
+          grid-template-columns: 100%;
         }
 
-        a:hover {
-          font-weight: bold;
+        @media (min-width: 900px) {
+          h3 {
+            font-size: 3rem;
+          }
+
+          .gallery {
+            display: grid;
+            grid-template-columns: 400px 400px 400px;
+            margin: auto;
+          }
+
+          .gallery-image {
+            margin-right: 10px;
+          }
         }
       `}</style>
     </div>
