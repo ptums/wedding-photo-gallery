@@ -1,8 +1,15 @@
 import React from 'react'
 import Head from 'next/head'
+import useSWR from 'swr'
+import { fetcher } from '../../utils/helpers'
 import PhotoGalleryBlock from '../../components/PhotoGalleryBlock'
 
 export const WeddingGallery = (): JSX.Element => {
+  const { data: afterCeremony } = useSWR(
+    '/api/get-photo-details/after-ceremony',
+    fetcher
+  )
+
   return (
     <>
       <Head>
@@ -10,12 +17,12 @@ export const WeddingGallery = (): JSX.Element => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <PhotoGalleryBlock title="Before Ceremony" />
-        <PhotoGalleryBlock title="Ceremony" />
-        <PhotoGalleryBlock title="After Ceremony" />
-        <PhotoGalleryBlock title="Before Reception" />
-        <PhotoGalleryBlock title="Reception" />
-        <PhotoGalleryBlock title="Rachel & Peter" />
+        {afterCeremony !== undefined && (
+          <PhotoGalleryBlock
+            title="After Ceremony"
+            slides={afterCeremony.photos}
+          />
+        )}
       </main>
       <style jsx>{`
         h1 {
