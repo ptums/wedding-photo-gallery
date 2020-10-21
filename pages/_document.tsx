@@ -9,6 +9,7 @@ class Document extends NextDocument<Props> {
       <Html>
         <Head>
           <meta charSet="utf-8" />
+          <link rel="stylesheet" href="/fonts.css" />
         </Head>
         <body>
           <Main />
