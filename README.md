@@ -6,6 +6,8 @@ A progressinve web application that contains multi sliders, videos, and download
 
 1. Upload photos for each section
 2. Finish writing component tests
+3. Make images load different sizes depending on the screen
+4. And fix PWA issues
 
 ## Motivation
 
