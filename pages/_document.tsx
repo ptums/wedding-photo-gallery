@@ -8,9 +8,7 @@ class Document extends NextDocument<Props> {
     return (
       <Html>
         <Head>
-          <link rel="shortcut icon" href="/favicon.ico" key="shortcutIcon" />
-          <link rel="manifest" href="/manifest.json" />
-          <link rel="stylesheet" href="/fonts.css" />
+          <meta charSet="utf-8" />
         </Head>
         <body>
           <Main />
