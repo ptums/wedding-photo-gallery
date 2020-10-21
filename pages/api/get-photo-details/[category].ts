@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import dbConnect from '../../../utils/db-connect'
-import Photos from '../../../models/Photos'
+import Photos, { PhotosInterface } from '../../../models/Photos'
 
 export default async function handler(
   req: NextApiRequest,
@@ -10,11 +10,9 @@ export default async function handler(
 
   if (req.method === 'GET') {
     try {
-      const {
-        query: { category },
-      } = req
+      const category = req.query.category.toString()
 
-      const photos = await Photos.find({
+      const photos: Array<PhotosInterface> = await Photos.find({
         category,
       })
         .sort([['createdAt', -1]])
