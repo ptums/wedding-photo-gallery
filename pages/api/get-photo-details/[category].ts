@@ -17,7 +17,8 @@ export default async function handler(
       })
         .sort([['createdAt', -1]])
         .exec()
-
+      console.warn('photos response')
+      console.warn(photos)
       res.status(200).json({ status: 200, category, photos })
     } catch (error) {
       console.error(error)

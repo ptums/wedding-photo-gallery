@@ -7,8 +7,6 @@ A progressinve web application that contains multi sliders, videos, and download
 1. Upload photos for each section
 2. Finish writing component tests
 
-**Idea:** How to we add a link to PWA download?
-
 ## Motivation
 
 Wanted to create a progressive web application that contains all my wedding photos that are easily downloadable for friends and family.
