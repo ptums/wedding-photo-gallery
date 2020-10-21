@@ -11,24 +11,16 @@ export default async function handler(
   if (req.method === 'GET') {
     try {
       const category = req.query.category.toString()
-
-      const photos: Array<PhotosInterface> = await Photos.find({
+      const photosByCategory: Array<PhotosInterface> = await Photos.find({
         category,
-      })
-        .sort([['createdAt', -1]])
-        .exec()
+      }).sort([['createdAt', -1]])
 
-      const test = await Photos.find({})
-        .sort([['createdAt', -1]])
-        .exec()
+      console.warn('MONGODB_URI: ', process.env.MONGODB_URI)
 
-      console.warn('TEST')
-      console.warn(test)
-
-      res.status(200).json({ status: 200, category, photos })
+      res.status(200).json({ status: 200, category, photos: photosByCategory })
     } catch (error) {
       console.error(error)
-      res.status(500).json(error)
+      res.status(500).json({ status: 500, error })
     }
   }
 }
