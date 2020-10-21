@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Lightbox from 'react-image-lightbox'
 import styles from '../styles/LightBoxView.module.css'
+import { fetchImageForDownload } from '../utils/helpers'
 
 type Props = {
   image: string
@@ -8,21 +9,32 @@ type Props = {
 
 export default function LightBoxView({ image }: Props): JSX.Element {
   const [open, setOpen] = useState(false)
-  const imageLink = `https://res.cloudinary.com/petertumulty/image/upload/v1603156786/${image}`
+  const baseUrl = `https://res.cloudinary.com/petertumulty/image/upload/v1603156786/`
+  const imageLink = `${baseUrl}${image}`
+  const fileName = image
+    .slice(image.lastIndexOf('/') + 1, image.length)
+    .replace('webp', 'png')
+  const downloadLink = `${baseUrl}${image.replace('.webp', '.png')}`
 
   function DownloadButton() {
     return (
-      <a href={imageLink} className={styles.downloadLink} download>
+      <button
+        onClick={() => fetchImageForDownload(downloadLink, fileName)}
+        className={`${styles.removeBtnStyles} ${styles.zoomInLink} ${styles.white}`}
+      >
         Download
-      </a>
+      </button>
     )
   }
 
   return (
     <>
-      <a href={imageLink} className={styles.zoomInLink} download>
+      <button
+        onClick={() => fetchImageForDownload(downloadLink, fileName)}
+        className={`${styles.removeBtnStyles} ${styles.zoomInLink}`}
+      >
         Download
-      </a>
+      </button>
       <button
         type="button"
         className={`${styles.removeBtnStyles} ${styles.zoomInLink}`}

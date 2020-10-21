@@ -14,7 +14,11 @@ export default function Home(): JSX.Element {
     <>
       <Head>
         <title>Rachel & Peter Wedding Photo Gallery</title>
-        <link rel="icon" href="/favicon.ico" />
+        <meta charSet="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
       </Head>
       <main>
         <ImageBlock

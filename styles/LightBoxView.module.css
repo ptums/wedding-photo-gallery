@@ -5,8 +5,8 @@
   font-family: 'Roboto Condensed Light';
 }
 
-.removeBtnStyles{
-  background-color: rgba(255, 255, 255, .0);
+.removeBtnStyles {
+  background-color: rgba(255, 255, 255, 0);
   border: 0;
 }
 
@@ -23,4 +23,8 @@
 .zoomInLink:hover {
   font-weight: bold;
   cursor: pointer;
+}
+
+.white {
+  color: #FFF !important;
 }

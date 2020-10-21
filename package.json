@@ -29,6 +29,8 @@
     "mongoose": "^5.10.9",
     "mongoose-typescript": "^1.0.7",
     "next": "latest",
+    "next-compose-plugins": "^2.2.0",
+    "next-pwa": "^3.1.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-image-lightbox": "^5.1.1",

@@ -9,7 +9,7 @@ class Document extends NextDocument<Props> {
       <Html>
         <Head>
           <link rel="shortcut icon" href="/favicon.ico" key="shortcutIcon" />
-          {/* <link rel="manifest" href="/manifest.json" /> */}
+          <link rel="manifest" href="/manifest.json" />
           <link rel="stylesheet" href="/fonts.css" />
         </Head>
         <body>
