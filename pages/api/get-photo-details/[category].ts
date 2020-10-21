@@ -18,10 +18,13 @@ export default async function handler(
         .sort([['createdAt', -1]])
         .exec()
 
-      console.warn('process.env.MONGODB_URI')
-      console.warn(process.env.MONGODB_URI)
-      console.warn('photos response')
-      console.warn(photos)
+      const test = await Photos.find({})
+        .sort([['createdAt', -1]])
+        .exec()
+
+      console.warn('TEST')
+      console.warn(test)
+
       res.status(200).json({ status: 200, category, photos })
     } catch (error) {
       console.error(error)
