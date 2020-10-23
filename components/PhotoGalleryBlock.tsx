@@ -1,14 +1,16 @@
 import React from 'react'
-import { Slide } from '../interfaces'
+import { Slide, UserAgent } from '../interfaces'
 import ImageBlock from './ImageBlock'
 import LightBoxView from './LightBoxView'
 
 type Props = {
   title: string
   slides: Slide[]
+  userAgent: UserAgent
+  shadow: boolean
 }
 
-const PhotoGalleryBlock = ({ title, slides }: Props) => {
+const PhotoGalleryBlock = ({ title, slides, userAgent, shadow }: Props) => {
   return (
     <div>
       <h3>{title}</h3>
@@ -19,7 +21,8 @@ const PhotoGalleryBlock = ({ title, slides }: Props) => {
               <ImageBlock
                 image={slide.image}
                 altText={slide.altText}
-                options="/c_scale,w_390/"
+                userAgent={userAgent}
+                shadow={shadow}
               />
               <LightBoxView image={slide.image} />
             </div>

@@ -1,19 +1,15 @@
 import React from 'react'
 import Carousel from 'react-multi-carousel'
-import { imageUrl } from '../utils/helpers'
-import { Slide } from '../interfaces'
+import { formatImageUrl } from '../utils/helpers'
+import { Slide, UserAgent } from '../interfaces'
 
 type Props = {
   slides: Slide[]
+  userAgent: UserAgent
 }
 
-export default function SliderBlock({ slides }: Props): JSX.Element {
+export default function SliderBlock({ slides, userAgent }: Props): JSX.Element {
   const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 1,
-      dots: true,
-    },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 1,
@@ -30,6 +26,8 @@ export default function SliderBlock({ slides }: Props): JSX.Element {
       dots: true,
     },
   }
+
+  const options = userAgent.deviceType === 'mobile' ? 'c_scale,w_464' : null
 
   return (
     <Carousel
@@ -57,7 +55,7 @@ export default function SliderBlock({ slides }: Props): JSX.Element {
             key={slide._id}
             alt={slide.altText}
             height="auto"
-            src={imageUrl(slide.options, slide.image)}
+            src={formatImageUrl(false, slide.image, options, userAgent.os)}
             width="100%"
           />
         ))}

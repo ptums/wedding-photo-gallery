@@ -15,8 +15,6 @@ export default async function handler(
         category,
       }).sort([['createdAt', -1]])
 
-      console.warn('MONGODB_URI: ', process.env.MONGODB_URI)
-
       res.status(200).json({ status: 200, category, photos: photosByCategory })
     } catch (error) {
       console.error(error)

@@ -1,13 +1,19 @@
 import Head from 'next/head'
 import useSWR from 'swr'
+import { useUserAgent } from 'next-useragent'
 import ImageBlock from '../components/ImageBlock'
 import ContentBlock from '../components/ContentBlock'
 import SliderBlock from '../components/SliderBlock'
 import VideoBlock from '../components/VideoBlock'
 import GalleryLink from '../components/GalleryLink'
 import { fetcher } from '../utils/helpers'
+import { UserAgent } from '../interfaces/'
 
-export default function Home(): JSX.Element {
+type Props = {
+  userAgent: UserAgent
+}
+
+export default function Home({ userAgent }: Props): JSX.Element {
   const { data } = useSWR('/api/get-photo-details/home', fetcher)
 
   return (
@@ -28,10 +34,16 @@ export default function Home(): JSX.Element {
         <link rel="manifest" href="/manifest.json" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="application-name" content="NJ Labor Attorneys" />
-        <meta name="apple-mobile-web-app-title" content="NJ Labor Attorneys" />
-        <meta name="theme-color" content="#061F3B" />
-        <meta name="msapplication-navbutton-color" content="#061F3B" />
+        <meta
+          name="application-name"
+          content="Rachel & Peter Wedding Gallery"
+        />
+        <meta
+          name="apple-mobile-web-app-title"
+          content="Rachel & Peter Wedding Gallery"
+        />
+        <meta name="theme-color" content="#FFFFFF" />
+        <meta name="msapplication-navbutton-color" content="#FFFFFF" />
         <meta
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
@@ -93,9 +105,10 @@ export default function Home(): JSX.Element {
       </Head>
       <main>
         <ImageBlock
-          image="wedding/site/peterrachelattablewithtext-version-two_lkoevj.webp"
+          image="wedding/site/peterrachelattablewithtext-version-two_lkoevj"
           altText="Rachel & Peter wedding"
-          options="/e_shadow:35,r_10/"
+          userAgent={userAgent}
+          shadow={true}
         />
         <ContentBlock position="right">
           <h3>About</h3>
@@ -112,9 +125,10 @@ export default function Home(): JSX.Element {
           </p>
         </ContentBlock>
         <ImageBlock
-          image="wedding/site/ring1-version-two_tkcxov.webp"
+          image="wedding/site/ring1-version-two_tkcxov"
           altText="wedding ring"
-          options="/e_shadow:300,r_10/"
+          userAgent={userAgent}
+          shadow={true}
         />
         <ContentBlock position="left">
           <h3>Our History</h3>
@@ -123,7 +137,9 @@ export default function Home(): JSX.Element {
             since.
           </p>
         </ContentBlock>
-        {data != undefined && <SliderBlock slides={data.photos} />}
+        {data != undefined && (
+          <SliderBlock slides={data.photos} userAgent={userAgent} />
+        )}
         <div className="title">
           <h3>Our Love Story</h3>
         </div>
@@ -162,4 +178,31 @@ export default function Home(): JSX.Element {
       `}</style>
     </>
   )
+}
+
+export async function getServerSideProps({ req }) {
+  // get current device
+  const ua = useUserAgent(req.headers['user-agent'])
+  let device
+
+  if (ua.isDesktop) {
+    device = 'desktop'
+  }
+
+  if (ua.isMobile) {
+    device = 'mobile'
+  }
+
+  if (ua.isTablet) {
+    device = 'tablet'
+  }
+
+  return {
+    props: {
+      userAgent: {
+        deviceType: device,
+        os: ua.os,
+      },
+    },
+  }
 }

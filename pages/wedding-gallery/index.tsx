@@ -1,10 +1,16 @@
 import React from 'react'
 import Head from 'next/head'
 import useSWR from 'swr'
+import { useUserAgent } from 'next-useragent'
 import { fetcher } from '../../utils/helpers'
 import PhotoGalleryBlock from '../../components/PhotoGalleryBlock'
+import { UserAgent } from '../../interfaces/'
 
-export const WeddingGallery = (): JSX.Element => {
+type Props = {
+  userAgent: UserAgent
+}
+
+export default function WeddingGallery({ userAgent }: Props): JSX.Element {
   const { data: afterCeremony } = useSWR(
     '/api/get-photo-details/after-ceremony',
     fetcher
@@ -94,6 +100,8 @@ export const WeddingGallery = (): JSX.Element => {
           <PhotoGalleryBlock
             title="After Ceremony"
             slides={afterCeremony.photos}
+            userAgent={userAgent}
+            shadow={true}
           />
         )}
       </main>
@@ -124,4 +132,29 @@ export const WeddingGallery = (): JSX.Element => {
   )
 }
 
-export default WeddingGallery
+export async function getServerSideProps({ req }) {
+  // get current device
+  const ua = useUserAgent(req.headers['user-agent'])
+  let device
+
+  if (ua.isDesktop) {
+    device = 'desktop'
+  }
+
+  if (ua.isMobile) {
+    device = 'mobile'
+  }
+
+  if (ua.isTablet) {
+    device = 'tablet'
+  }
+
+  return {
+    props: {
+      userAgent: {
+        deviceType: device,
+        os: ua.os,
+      },
+    },
+  }
+}

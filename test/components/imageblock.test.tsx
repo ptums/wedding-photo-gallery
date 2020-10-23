@@ -4,9 +4,8 @@ import ImageBlock from '../../components/ImageBlock'
 
 describe('ImageBlock component', () => {
   const props = {
-    image: 'wedding/site/peterrachelattable_utqiyz.webp',
+    image: 'wedding/site/peterrachelattable_utqiyz',
     altText: 'Rachel & Peter wedding',
-    options: '/e_shadow:35,r_10/',
   }
 
   it('renders ImageBlock component', () => {
