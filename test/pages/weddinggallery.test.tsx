@@ -1,14 +1,14 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import Home from '../../pages/'
+import WeddingGallery from '../../pages/wedding-gallery'
 
-describe('Home page', () => {
+describe('Wedding Gallery', () => {
   const userAgent = {
     os: 'Android',
     deviceType: 'mobile',
   }
   it('matches snapshot', () => {
-    const { asFragment } = render(<Home userAgent={userAgent} />, {})
+    const { asFragment } = render(<WeddingGallery userAgent={userAgent} />, {})
     expect(asFragment()).toMatchSnapshot()
   })
 })

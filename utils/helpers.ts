@@ -40,6 +40,10 @@ function getExtension(os: string) {
     extension = 'webp'
   }
 
+  if (os !== 'Windows' && os !== 'iOS' && os !== 'Android') {
+    extension = 'png'
+  }
+
   return extension
 }
 

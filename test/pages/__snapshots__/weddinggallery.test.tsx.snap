@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Wedding Gallery matches snapshot 1`] = `
+<DocumentFragment>
+  <main
+    class="jsx-2359628166"
+  />
+</DocumentFragment>
+`;

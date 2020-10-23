@@ -6,6 +6,11 @@ describe('ImageBlock component', () => {
   const props = {
     image: 'wedding/site/peterrachelattable_utqiyz',
     altText: 'Rachel & Peter wedding',
+    userAgent: {
+      deviceType: 'desktop',
+      os: 'Windows',
+    },
+    shadow: false,
   }
 
   it('renders ImageBlock component', () => {

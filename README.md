@@ -2,12 +2,6 @@
 
 A progressinve web application that contains multi sliders, videos, and downloadable photographs from my wedding.
 
-## To Do
-
-1. Upload photos for each section
-2. Finish writing component tests
-3. Run image test on Windows & iOs
-
 ## Motivation
 
 Wanted to create a progressive web application that contains all my wedding photos that are easily downloadable for friends and family.

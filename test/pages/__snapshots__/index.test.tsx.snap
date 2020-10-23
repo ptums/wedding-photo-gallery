@@ -12,7 +12,7 @@ exports[`Home page matches snapshot 1`] = `
       <img
         alt="Rachel & Peter wedding"
         height="auto"
-        src="https://res.cloudinary.com/petertumulty/image/upload/e_shadow:35,r_10/v1602980583/wedding/site/peterrachelattablewithtext-version-two_lkoevj.webp"
+        src="https://res.cloudinary.com/petertumulty/image/upload/e_shadow:60/c_scale,w_464/v1602980583/wedding/site/peterrachelattablewithtext-version-two_lkoevj.webp"
         width="100%"
       />
     </span>
@@ -50,7 +50,7 @@ exports[`Home page matches snapshot 1`] = `
       <img
         alt="wedding ring"
         height="auto"
-        src="https://res.cloudinary.com/petertumulty/image/upload/e_shadow:300,r_10/v1602980583/wedding/site/ring1-version-two_tkcxov.webp"
+        src="https://res.cloudinary.com/petertumulty/image/upload/e_shadow:60/c_scale,w_464/v1602980583/wedding/site/ring1-version-two_tkcxov.webp"
         width="100%"
       />
     </span>
@@ -81,16 +81,18 @@ exports[`Home page matches snapshot 1`] = `
         Our Love Story
       </h3>
     </div>
-    <iframe
-      allowfullscreen=""
-      class="jsx-433474415 aligncenter"
-      data-testid="video"
-      frameborder="0"
-      height="595"
-      src="https://player.vimeo.com/video/270889689"
-      title="Rachel & Peter video"
-      width="1046"
-    />
+    <div
+      class="jsx-1229189858"
+    >
+      <iframe
+        allowfullscreen=""
+        class="jsx-1229189858"
+        data-testid="video"
+        frameborder="0"
+        src="https://player.vimeo.com/video/270889689"
+        title="Rachel & Peter video"
+      />
+    </div>
     <div
       class="jsx-1634938835"
     >
