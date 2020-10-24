@@ -2,6 +2,8 @@
 
 A progressinve web application that contains multi sliders, videos, and downloadable photographs from my wedding.
 
+[Live Site](https://rachel-peter-wedding-photo-gallery.vercel.app)
+
 ## Motivation
 
 Wanted to create a progressive web application that contains all my wedding photos that are easily downloadable for friends and family.
@@ -20,16 +22,16 @@ Wanted to create a progressive web application that contains all my wedding phot
 
 **Built with**
 
+- [Cloudinary](https://cloudinary.com/)
+- [Jest](https://jestjs.io/)
+- [MongoDB](https://www.mongodb.com/)
+- [Mongoose](https://mongoosejs.com/)
 - [Next.js](https://nextjs.org/)
-- [React Lazy Load Image Component](https://www.npmjs.com/package/react-lazy-load-image-component)
 - [React Multi Carousel](https://w3js.com/react-multi-carousel)
+- [React Lazy Load Image Component](https://www.npmjs.com/package/react-lazy-load-image-component)
+- [React Testing Library](https://testing-library.com)
 - [SWR](https://github.com/vercel/swr)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Jest](https://jestjs.io/)
-- [React Testing Library](https://testing-library.com)
-- [Mongoose](https://mongoosejs.com/)
-- [MongoDB](https://www.mongodb.com/)
-- [Cloudinary](https://cloudinary.com/)
 
 ## Install
 
