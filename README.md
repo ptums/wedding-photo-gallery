@@ -2,7 +2,7 @@
 
 A progressinve web application that contains multi sliders, videos, and downloadable photographs from my wedding.
 
-[Live Site](https://rachel-peter-wedding-photo-gallery.vercel.app)
+### [Live Site](https://rachel-peter-wedding-photo-gallery.vercel.app)
 
 ## Motivation
 
