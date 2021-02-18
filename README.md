@@ -1,6 +1,6 @@
 # Wedding Photo Gallery
 
-A progressinve web application that contains multi sliders, videos, and downloadable photographs from my wedding.
+A progressive web application that contains multi sliders, videos, and downloadable photographs from my wedding.
 
 ### [Live Site](https://rachel-peter-wedding-photo-gallery.vercel.app)
 
